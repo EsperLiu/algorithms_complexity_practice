@@ -1,8 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-SortAnalysisV1(GenerateRandomArray(25000));
+using System.Diagnostics.Metrics;
 
-/*
+// SortAnalysisV1(GenerateRandomArray(1000));
+
+
 for (int i = 1000; i <= 20000; i = i + 1000)
 {
     Console.WriteLine("Input size: " + i);
@@ -10,11 +12,7 @@ for (int i = 1000; i <= 20000; i = i + 1000)
     {
         SortAnalysisV1(GenerateRandomArray(i));
     }
-}*/
-
-
-
-
+}
 
 
 static int SortAnalysisV1(int[] A)
@@ -28,9 +26,10 @@ static int SortAnalysisV1(int[] A)
     {
         int v = A[i];
         int j = i - 1;
-        while (j >= 0 && ++count> 0 && A[j] > v)
+
+        while (j >= 0  && ++count > 0 && A[j] > v)
         {
-        
+
             A[j + 1] = A[j];
             j = j - 1;
         }
@@ -60,7 +59,7 @@ static int[] GenerateRandomArray(int size)
 
     for (int i = 0; i < A.Length; i++)
     {
-        A[i] = rnd.Next(Int32.MaxValue); // (-2,147,483,648 to +2,147,483,647)
+        A[i] = rnd.Next(Int32.MaxValue); 
     }
     return A;
 }
