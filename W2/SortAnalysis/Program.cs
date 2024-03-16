@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using System.Diagnostics.Metrics;
-
+﻿
 // SortAnalysisV1(GenerateRandomArray(1000));
 
 
@@ -18,7 +15,7 @@ for (int i = 1000; i <= 20000; i = i + 1000)
 static int SortAnalysisV1(int[] A)
 {
     // print out A to see the input
-    //PrintArray(A);
+    // PrintArray(A);
 
     int count = 0;
     int n = A.Length;
