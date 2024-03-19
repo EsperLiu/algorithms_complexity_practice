@@ -1,19 +1,16 @@
-﻿//CAB301 - Workshop 3
-//Maolin Tang
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Queue
+namespace CCL_Queue
 {
-    // Invariants: 0 <= Count <= Capacity
-    public interface IQueue
+    internal interface IQueue
     {
         /* Pre:  true
-		 * Post: return the capacity of the queue
-		 */
+        * Post: return the capacity of the queue
+        */
         int Capacity { get; }
 
         /* Pre:  true
@@ -52,5 +49,6 @@ namespace Queue
 		 * Post: the queue becomes empty
 		 */
         void Clear();
+
     }
 }

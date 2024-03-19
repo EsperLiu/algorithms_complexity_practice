@@ -1,54 +1,16 @@
-﻿//CAB301 - Workshop 3
-//Maolin Tang
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Queue
+namespace CCL_Queue
 {
-    public class ListNode
-    {
-        private Object data;
-        private ListNode next;
-
-        public ListNode(Object obj)
-        {
-            data = obj;
-            next = null;
-        }
-
-        public Object Data
-        {
-            get
-            {
-                return data;
-            }
-            set
-            {
-                data = value;
-            }
-        }
-
-        public ListNode Next
-        {
-            get
-            {
-                return next;
-            }
-            set
-            {
-                next = value;
-            }
-        }
-    }  // enf of ListNode
-
-    public class CircularQueue : IQueue
+    internal class CircularLinkedList:IQueue
     {
         private int capacity = Int32.MaxValue;
         private int count = 0;
-        private ListNode tail = null;
+        private Node tail = null;
 
         public int Capacity
         {
@@ -82,7 +44,7 @@ namespace Queue
             // check the pre-condition
             if (!IsFull())
             {
-                ListNode aNode = new ListNode(item);
+                Node aNode = new Node(item);
                 if (count == 0) //special case: the queue is empty
                 {
                     tail = aNode;

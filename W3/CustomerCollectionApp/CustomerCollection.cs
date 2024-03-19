@@ -1,12 +1,10 @@
-﻿//CAB301 - Workshop 3
-//Maolin Tang
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustCollectionApp
+namespace CustomerCollectionApp
 {
     class CustomerCollection
     {
@@ -62,6 +60,7 @@ namespace CustCollectionApp
             for (int i = 0; i < noCustomers; i++)
                 Console.Write(customers[i]);
         }
+
 
     }
 }
